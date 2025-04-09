@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Login-Vault</title>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar glass-card">
+      <div class="sidebar-header">
+        <div class="logo">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 7L12 12L21 7L12 2Z" fill="url(#paint0_linear)"/>
+            <path d="M3 12L12 17L21 12" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M3 17L12 22L21 17" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="paint0_linear" x1="12" y1="2" x2="12" y2="12" gradientUnits="userSpaceOnUse">
+                <stop stop-color="var(--primary)"/>
+                <stop offset="1" stop-color="var(--accent)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <h2>Your App</h2>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active">
+          <i class="ph ph-house"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="ph ph-user"></i>
+          <span>Profile</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="ph ph-envelope"></i>
+          <span>Messages</span>
+          <span class="badge">3</span>
+        </a>
+        <a href="#" class="nav-item">
+          <i class="ph ph-gear"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <button id="logout-btn" class="btn btn-logout">
+          <i class="ph ph-sign-out"></i>
+          <span>Logout</span>
+        </button>
+      </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="main-header glass-card">
+        <div class="header-left">
+          <h1>Welcome, <span id="user-name">User</span></h1>
+          <p class="text-secondary">Here's what's happening today</p>
+        </div>
+        <div class="header-right">
+          <div class="user-avatar">
+            <img src="https://ui-avatars.com/api/?name=User&background=6c5ce7&color=fff" alt="User Avatar">
+          </div>
+        </div>
+      </header>
+      
+      <div class="content-grid">
+        <!-- Stats Cards -->
+        <div class="stats-card glass-card">
+          <div class="stats-icon" style="background: rgba(108, 92, 231, 0.1);">
+            <i class="ph ph-chart-line-up" style="color: var(--primary);"></i>
+          </div>
+          <div class="stats-info">
+            <h3>Total Revenue</h3>
+            <p class="stats-value">$12,345</p>
+            <p class="stats-change positive">
+              <i class="ph ph-arrow-up"></i> 12% from last month
+            </p>
+          </div>
+        </div>
+        
+        <div class="stats-card glass-card">
+          <div class="stats-icon" style="background: rgba(0, 206, 201, 0.1);">
+            <i class="ph ph-users" style="color: var(--accent);"></i>
+          </div>
+          <div class="stats-info">
+            <h3>New Users</h3>
+            <p class="stats-value">1,234</p>
+            <p class="stats-change positive">
+              <i class="ph ph-arrow-up"></i> 8% from last month
+            </p>
+          </div>
+        </div>
+        
+        <!-- Recent Activity -->
+        <div class="activity-card glass-card">
+          <div class="card-header">
+            <h3>Recent Activity</h3>
+            <a href="#" class="text-accent">View All</a>
+          </div>
+          <div class="activity-list">
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="ph ph-check-circle"></i>
+              </div>
+              <div class="activity-details">
+                <p>New user registration</p>
+                <small class="text-secondary">2 minutes ago</small>
+              </div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-icon">
+                <i class="ph ph-warning"></i>
+              </div>
+              <div class="activity-details">
+                <p>System update required</p>
+                <small class="text-secondary">1 hour ago</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

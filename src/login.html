@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Login-Vault</title>
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.0.3/src/bold/style.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="auth-container animate-fade-in">
+    <header class="auth-header">
+      <div class="logo animate-float">
+        <!-- Your logo SVG or image here -->
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="bg-im">
+          <path d="M12 2L3 7L12 12L21 7L12 2Z" fill="url(#paint0_linear)"/>
+          <path d="M3 12L12 17L21 12" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M3 17L12 22L21 17" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="paint0_linear" x1="12" y1="2" x2="12" y2="12" gradientUnits="userSpaceOnUse">
+              <stop stop-color="var(--primary)"/>
+              <stop offset="1" stop-color="var(--accent)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1>Welcome Back</h1>
+      <p class="text-secondary">Sign in to access your dashboard</p>
+    </header>
+    
+    <form id="login-form" class="glass-card">
+      <div class="input-group">
+        <i class="ph ph-envelope"></i>
+        <input type="email" id="login-email" placeholder="Email" class="glass-input" required>
+        <span class="input-border"></span>
+      </div>
+      
+      <div class="input-group">
+        <i class="ph ph-lock"></i>
+        <input type="password" id="login-password" placeholder="Password" class="glass-input" required>
+        <button type="button" class="password-toggle">
+          <i class="ph ph-eye"></i>
+        </button>
+        <span class="input-border"></span>
+      </div>
+      
+      <button type="submit" class="btn btn-primary mt-2">
+        <span>Sign In</span>
+        <i class="ph ph-arrow-right"></i>
+      </button>
+      
+      <div class="links mt-3 text-center">
+        <a href="forgot-password.html" class="text-secondary">Forgot password?</a>
+        <p class="mt-1">Don't have an account? <a href="register.html" class="text-accent">Sign up</a></p>
+      </div>
+    </form>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+  
+  <script src="app.js"></script>
+</body>
+</html>
